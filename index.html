@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ Happy Birthday, My Love! ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.js"></script>
+
+<style>
+/* --- General Styling & Theme --- */
+:root {
+--soft-pink: #FFB6C1;
+--pastel-purple: #D8BFD8;
+--rose-gold: #B76E79;
+--text-color: #4B0082; /* Deep violet for contrast */
+--bg-gradient: linear-gradient(135deg, var(--pastel-purple) 0%, var(--soft-pink) 100%);
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+color: var(--text-color);
+background: var(--bg-gradient);
+overflow-x: hidden; /* Prevent horizontal scroll from animations */
+scroll-behavior: smooth;
+}
+
+/* --- Sections Styling --- */
+.section {
+min-height: 200vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 40px 20px;
+position: relative;
+}
+
+/* --- Welcome Page Styling (1) --- */
+#welcome {
+background: var(--bg-gradient);
+color: white; /* Use white text on the gradient background */
+}
+
+.hbd-text {
+font-family: 'Dancing Script', cursive;
+font-size: 8vw; /* Responsive size */
+font-weight: 700;
+margin-bottom: 40px;
+color: white;
+text-shadow: 0 0 15px var(--rose-gold), 0 0 30px var(--soft-pink);
+animation: textGlow 3s infinite alternate;
+}
+
+@keyframes textGlow {
+0% { text-shadow: 0 0 10px var(--pastel-purple), 0 0 20px var(--rose-gold); }
+100% { text-shadow: 0 0 20px var(--soft-pink), 0 0 30px var(--pastel-purple); }
+}
+
+.name-text {
+font-family: 'Dancing Script', cursive;
+font-size: 12vw;
+font-weight: 700;
+color: var(--rose-gold);
+text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+position: relative;
+display: inline-block;
+animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.1); }
+}
+
+/* --- Animated Stickers & Emojis (General) --- */
+.animated-sticker {
+font-size: 4em;
+position: absolute;
+opacity: 0;
+animation: floatAndFade 5s infinite ease-in-out;
+pointer-events: none; /* Ignore click events */
+z-index: 100;
+}
+
+@keyframes floatAndFade {
+0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+50% { transform: translate(10px, -50vh) rotate(5deg); opacity: 0.8; }
+100% { transform: translate(0, -100vh) rotate(-5deg); opacity: 0; }
+}
+
+.animated-sticker:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.animated-sticker:nth-child(2) { top: 50%; left: 85%; animation-delay: 1s; }
+.animated-sticker:nth-child(3) { top: 80%; left: 30%; animation-delay: 2s; }
+.animated-sticker:nth-child(4) { top: 20%; left: 50%; animation-delay: 3s; }
+.animated-sticker:nth-child(5) { top: 70%; left: 5%; animation-delay: 4s; }
+
+/* --- Music Controls --- */
+#music-control {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+cursor: pointer;
+background: rgba(255, 255, 255, 0.7);
+border-radius: 50%;
+padding: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#music-control i {
+font-size: 24px;
+color: var(--rose-gold);
+}
+
+/* --- Click Reactions (Dynamically added) --- */
+.click-reaction {
+position: fixed;
+font-size: 3em;
+animation: fadeAndRise 1s forwards;
+pointer-events: none;
+z-index: 999;
+}
+
+@keyframes fadeAndRise {
+0% { transform: translate(0, 0); opacity: 1; }
+100% { transform: translate(0, -50px); opacity: 0; }
+}
+
+</style>
+</head>
+<body>
+
+<audio id="bday-song" loop preload="auto">
+<source src="YOUR_AUDIO_URL_HERE" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()">
+<i class="fas fa-volume-up">🔊</i> </div>
+
+<section id="welcome" class="section">
+<div class="animated-sticker">💖</div>
+<div class="animated-sticker">✨</div>
+<div class="animated-sticker">🌸</div>
+<div class="animated-sticker">🎈</div>
+<div class="animated-sticker">🦋</div>
+
+<h1 class="hbd-text">Happy Birthday 🎉                          My Crush</h1>
+<h3 class="name-text">Fathima</h3>
+
+<h1 class="italian-text">By Amaan</h1>
+<p style="color: white; font-size: 1.5em; margin-top: 20px;">Today is extra special day, not just because it’s your birthday,
+but because someone as amazing as you was born today.
+
+
+Your smile has a kind of magic that can make any day brighter,
+and honestly… the world feels a little happier knowing it’s your birthday 💕
+
+
+I don’t know how to say everything perfectly,
+but I do know this —
+anyone who gets to see you smile is already lucky 😉
+
+
+May your 15th year be full of happiness, laughter,
+beautiful memories, and dreams slowly coming true.
+Never forget how special you are, because you truly are 🌸
+Btw how can show u how much I like youu? 
+Stay sweet. Stay confident. Stay you.
+And once again… Happy Birthday, Fathima 💖✨/p>
+<h1 class="name-text">Adhi Lich</h1>
+</section>
+<h1 class="hbd-text">btw when are you telling me yess??</h1>
+<script>
+const audio = document.getElementById('bday-song');
+const musicControl = document.getElementById('music-control');
+let isPlaying = false;
+
+// --- Confetti Burst on Page Load ---
+function fireConfetti() {
+confetti({
+particleCount: 200,
+spread: 120,
+origin: { y: 0.6 },
+colors: ['#FFB6C1', '#D8BFD8', '#B76E79', '#FFFFFF', '#FFD700']
+});
+}
+
+// --- Auto-Play Music with Fade-In ---
+function startMusic() {
+// Check if audio source is available before trying to play
+if (audio.readyState >= 2) {
+audio.volume = 0;
+audio.play().then(() => {
+isPlaying = true;
+// Fade-in effect
+let vol = 0;
+const fadeInterval = setInterval(() => {
+if (vol < 0.3) { // Max volume set low for background music
+vol += 0.01;
+audio.volume = vol;
+} else {
+clearInterval(fadeInterval);
+}
+}, 200);
+}).catch(error => {
+// Autoplay restriction: Handle error, prompt user to click
+console.log("Autoplay prevented. User interaction required.");
+});
+}
+}
+
+// Music toggle function
+function toggleMusic() {
+if (isPlaying) {
+audio.pause();
+musicControl.innerHTML = '<i>🔇</i>';
+isPlaying = false;
+} else {
+startMusic(); // Will handle both initial play and resume
+musicControl.innerHTML = '<i>🔊</i>';
+isPlaying = true;
+}
+}
+
+// --- Cute Animated Emojis on Click ---
+function createClickReaction(event) {
+const emojis = ['💖', '🥰', '😘', '✨', '💐', '🥳'];
+const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+const reaction = document.createElement('div');
+reaction.className = 'click-reaction';
+reaction.innerHTML = emoji;
+reaction.style.left = `${event.clientX}px`;
+reaction.style.top = `${event.clientY}px`;
+
+document.body.appendChild(reaction);
+
+// Remove the element after the animation finishes
+setTimeout(() => {
+reaction.remove();
+}, 1000);
+}
+
+// --- Initial Setup ---
+window.onload = () => {
+// 1. Fire confetti
+fireConfetti();
+
+// 2. Try to start music (will often be blocked until user interaction)
+startMusic();
+};
+
+// 3. Add click reaction listener to the whole document
+document.addEventListener('click', createClickReaction);
+
+</script>
+</body>
+</html>
